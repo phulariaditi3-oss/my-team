@@ -1,7 +1,350 @@
-<html>
-    <body>
-        <head>
-            <h1>THE FIRST PROJECT</h1>
-        </head>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LifeRPG - Level Up Your Life</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+
+    <header class="nav-bar">
+      <div class="brand">
+        <span class="brand-icon">⚔</span>
+        <span>LifeRPG</span>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#quests">Quests</a>
+        <a href="#stats">Stats</a>
+        <a href="#shop">Shop</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle">☀</button>
+        <button class="start-btn" id="openAppBtn">Start Journey</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="landing-page" id="home">
+        <div class="hero container reveal">
+          <div class="hero-text">
+            <span class="eyebrow">Gamified Self-Improvement</span>
+            <h1 id="heroTitle">Level Up Your Real Life</h1>
+            <p>
+              Turn your habits, goals, and daily quests into an epic adventure.
+            </p>
+            <div class="hero-buttons">
+              <button class="start-btn" id="heroStartBtn">Start Journey</button>
+              <button class="secondary-btn">Watch Demo</button>
+            </div>
+            <div class="hero-stats">
+              <div>
+                <strong>10K+</strong>
+                <span>Players</span>
+              </div>
+              <div>
+                <strong>78%</strong>
+                <span>Goal Success</span>
+              </div>
+              <div>
+                <strong>4.9</strong>
+                <span>Rating</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="character-card">
+              <div class="character-glow"></div>
+              <div class="character-avatar">
+                <div class="avatar-head"></div>
+                <div class="avatar-body"></div>
+                <div class="avatar-sword"></div>
+              </div>
+              <div class="character-panel">
+                <div>
+                  <span>Level</span>
+                  <strong id="heroLevel">1</strong>
+                </div>
+                <div>
+                  <span>XP</span>
+                  <strong id="heroXp">0%</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section class="feature-section reveal">
+          <div class="container">
+            <h2>Why LifeRPG works</h2>
+            <div class="feature-grid">
+              <div class="feature-card glass-card">
+                <span>🎯</span>
+                <h3>Goal Tracking</h3>
+                <p>Measure progress with XP, levels, and milestones that feel rewarding.</p>
+              </div>
+              <div class="feature-card glass-card">
+                <span>🔥</span>
+                <h3>Daily Streaks</h3>
+                <p>Maintain momentum with streak rewards and daily challenges.</p>
+              </div>
+              <div class="feature-card glass-card">
+                <span>🏆</span>
+                <h3>Achievements</h3>
+                <p>Unlock badges that celebrate your growth and consistency.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="how-section reveal">
+          <div class="container how-grid">
+            <div>
+              <span class="eyebrow">How It Works</span>
+              <h2>Three simple steps to your next level</h2>
+            </div>
+            <div class="steps">
+              <div class="step-card glass-card">
+                <span>01</span>
+                <h3>Pick a quest</h3>
+                <p>Choose a habit, goal, or challenge to tackle today.</p>
+              </div>
+              <div class="step-card glass-card">
+                <span>02</span>
+                <h3>Complete it</h3>
+                <p>Check it off and watch your XP and coins stack up.</p>
+              </div>
+              <div class="step-card glass-card">
+                <span>03</span>
+                <h3>Level up</h3>
+                <p>Unlock rewards, achievements, and a stronger version of you.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="preview-section reveal">
+          <div class="container">
+            <h2>Dashboard Preview</h2>
+            <div class="preview-grid">
+              <div class="preview-screen glass-card"></div>
+              <div class="preview-screen glass-card"></div>
+              <div class="preview-screen glass-card"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="testimonial-section reveal">
+          <div class="container">
+            <h2>Players love it</h2>
+            <div class="testimonial-grid">
+              <div class="testimonial-card glass-card">
+                <p>"LifeRPG turned my daily routine into something exciting."</p>
+                <strong>Emily R.</strong>
+              </div>
+              <div class="testimonial-card glass-card">
+                <p>"The streaks and rewards keep me consistent every single day."</p>
+                <strong>Marcus T.</strong>
+              </div>
+              <div class="testimonial-card glass-card">
+                <p>"It feels like a game, but it genuinely improves my focus."</p>
+                <strong>Priya S.</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <footer class="footer reveal">
+          <div class="container footer-inner">
+            <p>© 2026 LifeRPG. Turn goals into glory.</p>
+            <a href="#dashboard">Open dashboard</a>
+          </div>
+        </footer>
+      </section>
+
+      <section class="app-shell" id="appShell">
+        <div class="app-header glass-card">
+          <div class="profile-section">
+            <div class="avatar-circle" id="profileAvatar">🧙</div>
+            <div>
+              <h3 id="profileName">Adventurer</h3>
+              <p id="profileTitle">Level 1 Hero</p>
+            </div>
+          </div>
+          <div class="xp-summary">
+            <div class="xp-ring-wrap">
+              <svg class="xp-ring" width="120" height="120">
+                <circle class="ring-bg" cx="60" cy="60" r="46"></circle>
+                <circle class="ring-progress" cx="60" cy="60" r="46"></circle>
+              </svg>
+              <div class="xp-ring-text">
+                <span id="levelDisplay">1</span>
+                <small>LVL</small>
+              </div>
+            </div>
+            <div>
+              <p>XP</p>
+              <strong id="xpDisplay">0 / 100</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="app-main">
+          <aside class="sidebar glass-card">
+            <button class="sidebar-btn active" data-section="dashboard">Dashboard</button>
+            <button class="sidebar-btn" data-section="quests">Quests</button>
+            <button class="sidebar-btn" data-section="stats">Stats</button>
+            <button class="sidebar-btn" data-section="shop">Shop</button>
+          </aside>
+
+          <section class="content-area">
+            <div class="section-panel active" id="dashboard">
+              <div class="stats-grid">
+                <div class="glass-card stat-card">
+                  <span>Coins</span>
+                  <strong id="coinDisplay">0</strong>
+                </div>
+                <div class="glass-card stat-card">
+                  <span>Streak</span>
+                  <strong id="streakDisplay">0</strong>
+                </div>
+                <div class="glass-card stat-card">
+                  <span>Completed</span>
+                  <strong id="completedCount">0</strong>
+                </div>
+                <div class="glass-card stat-card">
+                  <span>Achievements</span>
+                  <strong id="achievementCount">0</strong>
+                </div>
+              </div>
+
+              <div class="dashboard-grid">
+                <div class="glass-card dashboard-panel large-panel">
+                  <div class="panel-header">
+                    <h3>Daily Challenge</h3>
+                    <button class="claim-btn" id="challengeButton">Complete</button>
+                  </div>
+                  <p id="challengeText">Loading challenge...</p>
+                  <div class="challenge-footer">
+                    <span id="challengeReward">+0 XP · +0 Coins</span>
+                  </div>
+                </div>
+                <div class="glass-card dashboard-panel">
+                  <div class="panel-header">
+                    <h3>Character</h3>
+                  </div>
+                  <div class="avatar-picker">
+                    <button class="avatar-option active" data-avatar="Warrior">⚔</button>
+                    <button class="avatar-option" data-avatar="Mage">🧙</button>
+                    <button class="avatar-option" data-avatar="Archer">🏹</button>
+                    <button class="avatar-option" data-avatar="Ninja">🥷</button>
+                  </div>
+                </div>
+                <div class="glass-card dashboard-panel">
+                  <div class="panel-header">
+                    <h3>Progress</h3>
+                  </div>
+                  <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                  </div>
+                  <p id="progressText">0% to next level</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-panel" id="quests">
+              <div class="panel-toolbar">
+                <h3>Quest Board</h3>
+                <button class="start-btn" id="addQuestBtn">+ Add Quest</button>
+              </div>
+              <div class="quest-list" id="questList"></div>
+            </div>
+
+            <div class="section-panel" id="stats">
+              <div class="stats-visual-grid">
+                <div class="glass-card chart-card">
+                  <h3>XP Progress</h3>
+                  <canvas id="xpChart"></canvas>
+                </div>
+                <div class="glass-card chart-card">
+                  <h3>Daily Activity</h3>
+                  <canvas id="activityChart"></canvas>
+                </div>
+                <div class="glass-card chart-card">
+                  <h3>Quest Completion Rate</h3>
+                  <canvas id="completionChart"></canvas>
+                </div>
+                <div class="glass-card chart-card">
+                  <h3>Coins Earned</h3>
+                  <canvas id="coinsChart"></canvas>
+                </div>
+              </div>
+            </div>
+
+            <div class="section-panel" id="shop">
+              <div class="panel-toolbar">
+                <h3>Reward Shop</h3>
+                <span id="shopCoins">Coins: 0</span>
+              </div>
+              <div class="shop-grid" id="shopGrid"></div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <div class="modal" id="questModal">
+      <div class="modal-card glass-card">
+        <div class="modal-header">
+          <h3 id="modalTitle">Add Quest</h3>
+          <button class="close-btn" id="closeModalBtn">✕</button>
+        </div>
+        <form id="questForm">
+          <input type="hidden" id="questId" />
+          <label>
+            Title
+            <input type="text" id="questTitle" placeholder="Read 20 pages" required />
+          </label>
+          <label>
+            Difficulty
+            <select id="questDifficulty">
+              <option value="Easy">Easy</option>
+              <option value="Medium">Medium</option>
+              <option value="Hard">Hard</option>
+            </select>
+          </label>
+          <label>
+            XP Reward
+            <input type="number" id="questXp" min="10" max="300" value="50" required />
+          </label>
+          <label>
+            Coin Reward
+            <input type="number" id="questCoins" min="5" max="200" value="15" required />
+          </label>
+          <button type="submit" class="start-btn">Save Quest</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+    <div class="level-up-overlay" id="levelUpOverlay">
+      <div class="level-up-card">
+        <h1>LEVEL UP!</h1>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
